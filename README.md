@@ -16,7 +16,7 @@ docker volume create takserver-db
 
 docker network create takserver
 
-:~/takserver-docker-5.4-RELEASE-19$ sudo docker network create takserver
+sudo docker network create takserver
 05fdda8acfc290a0ba5e5a384814a510e1c5b5c1fee91b1e17c1acd836a92f49
 
 openssl rand -base64 12 | tr -dc 'a-zA-Z0-9' (ignore)
@@ -53,13 +53,11 @@ sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar
 
 --
 
-:~/takserver-docker-5.4-RELEASE-19$ sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '{PASSWORD}' webadmin"
+sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '{PASSWORD}' webadmin"
 Password complexity check failed. 
 
 
 Password must be a minimum of 15 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character from this list [-_!@#$%^&*(){}[]+=~`|:;<>,./?].
-
-!!SNCAdmin1-TAK$@#
 
 :~/takserver-docker-5.4-RELEASE-19$ sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '{PASSWORD}' webadmin"
 Password complexity check failed. Password must be a minimum of 15 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character from this list 
@@ -70,10 +68,7 @@ Password complexity check failed. Password must be a minimum of 15 characters in
 
 ----------
 
-sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '!!SNCAdmin1-TAK$@#' webadmin"
-
-:~/takserver-docker-5.4-RELEASE-19$ sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '!!SNCAdmin1-TAK$@#' webadmin"
-sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p 'cSNCAdmin1-TAK$@#' webadmin"
+sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p 'PASSSSSSSS' webadmin"
 User Updated:
         Username:      'webadmin'
         Role:          ROLE_ADMIN
@@ -81,14 +76,12 @@ User Updated:
         Groups (read and write permission):
                 __ANON__
 
-:~/takserver-docker-5.4-RELEASE-19$
-
 sudo chmod -R 777 webadmin.p12
 
 -rwxrwxrwx 1 root root 4582 Jun 17 16:54 webadmin.p12
 -rw-r--r-- 1 root root 5564 Jun 17 16:54 webadmin-trusted.pem
 -rw-r--r-- 1 root root 5020 Jun 17 16:55 webadmin.jks
-:~/takserver-docker-5.4-RELEASE-19/tak/certs/files$
+
 
 Copy from from WSL to C:\Ubuntu-WSL\webadmin.p.12
 

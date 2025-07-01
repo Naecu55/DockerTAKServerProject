@@ -88,3 +88,8 @@ Copy from from WSL to C:\Ubuntu-WSL\webadmin.p.12
 Goto chrome://settings/security click on Manage certificates and run through the process accordingly.
 ![image](https://github.com/user-attachments/assets/fadb0cd6-9ce5-4ddb-9992-81475868a829)
 
+cd ~/takserver-docker-5.4-RELEASE-19
+
+chucka@chucka:~/takserver-docker-5.4-RELEASE-19 sudo docker restart takserver![image](https://github.com/user-attachments/assets/db3d86dd-2827-456e-b213-512ce110713e)
+
+

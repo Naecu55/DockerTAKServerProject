@@ -1,6 +1,6 @@
-# DockerTAKServerProject
+DockerTAK Server Project
 
-Docker Ubuntu TAK Server Project
+Docker Ubuntu WSL TAK Server Project
 
 sudo apt-get -u upgrade
 
@@ -10,13 +10,14 @@ docker volume create takserver-db
 
  - docker network create is a Docker command used to create a new Docker network.
 
- - This command allows you to define the network's characteristics, such as the driver to use (e.g., bridge, overlay) # and other optional settings. 
+ - This command allows you to define the network's characteristics, such as the driver to use (e.g., bridge, overlay) - and other optional settings. 
 
-- User-defined networks enable containers to communicate with each other, and with the external world, based on the network configuration
+ - User-defined networks enable containers to communicate with each other, and with the external world, based on the network configuration
 
 docker network create takserver
 
 sudo docker network create takserver
+
 05fdda8acfc290a0ba5e5a384814a510e1c5b5c1fee91b1e17c1acd836a92f49
 
 openssl rand -base64 12 | tr -dc 'a-zA-Z0-9' (ignore)
@@ -50,17 +51,13 @@ sudo docker exec -it takserver bash -c "cd /opt/tak/certs && ./makeCert.sh clien
 sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar certmod -A /opt/tak/certs/files/webadmin.pem"
 
 sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '{PASSWORD}' webadmin"
-
---
-
-sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '{PASSWORD}' webadmin"
 Password complexity check failed. 
-
 
 Password must be a minimum of 15 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character from this list [-_!@#$%^&*(){}[]+=~`|:;<>,./?].
 
 :~/takserver-docker-5.4-RELEASE-19$ sudo docker exec -it takserver bash -c "java -jar /opt/tak/utils/UserManager.jar usermod -A -p '{PASSWORD}' webadmin"
-Password complexity check failed. Password must be a minimum of 15 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character from this list 
+
+Password complexity check failed. Password must be a minimum of 15 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character from this list.
 
 ------------
 
@@ -83,7 +80,7 @@ sudo chmod -R 777 webadmin.p12
 -rw-r--r-- 1 root root 5020 Jun 17 16:55 webadmin.jks
 
 
-Copy from from WSL to C:\Ubuntu-WSL\webadmin.p.12
+Copy  p.12 file from from WSL to C:\Ubuntu-WSL\webadmin.p.12
 
 Goto chrome://settings/security click on Manage certificates and run through the process accordingly.
 ![image](https://github.com/user-attachments/assets/fadb0cd6-9ce5-4ddb-9992-81475868a829)

@@ -1,4 +1,4 @@
-Docker Installing TAK Server 54 Version 19 onto Ubuntu WSL.
+Docker Installing TAK/FEDHUB Server 54 Version 19 onto Ubuntu WSL.
 
 --
 
@@ -23,13 +23,13 @@ cd takserver-docker-5.2-RELEASE-16/
 
 docker volume create takserver-db
 
-# docker network create is a Docker command used to create a new Docker network.
+docker network create is a Docker command used to create a new Docker network.
 
-# This command allows you to define the network's characteristics, such as the driver to use (e.g., bridge, overlay) # and other optional settings. 
+This command allows you to define the network's characteristics, such as the driver to use (e.g., bridge, overlay) # and other optional settings. 
 
-# User-defined networks enable containers to communicate with each other, and with the external world, based on the network configuration
+User-defined networks enable containers to communicate with each other, and with the external world, based on the network configuration
 
-# Creates a new volume that containers can consume and store data in.
+Creates a new volume that containers can consume and store data in.
 
 apt-get -u upgrade
 

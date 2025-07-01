@@ -59,6 +59,8 @@ Password must be a minimum of 15 characters including 1 uppercase, 1 lowercase, 
 
 Password complexity check failed. Password must be a minimum of 15 characters including 1 uppercase, 1 lowercase, 1 number, and 1 special character from this list.
 
+xxxxxxx
+
 ------------
 
 [-_!@#$%^&*(){}[]+=~`|:;<>,./?].
